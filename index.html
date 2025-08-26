@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thư viện Blogs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: #fff;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .library {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .blog-card {
+      background: rgba(255,255,255,0.85);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255,0,150,0.2), rgba(0,204,255,0.2));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .blog-card:hover::before {
+      opacity: 1;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    .blog-card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .blog-card p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .blog-card a {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .blog-card a:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Thư viện Blogs</h1>
+    <p>Nơi tổng hợp tất cả bài viết của hệ sinh thái ✨</p>
+  </header>
+
+  <section class="library">
+    <div class="blog-card">
+      <h2>📖 Hướng dẫn CapCut</h2>
+      <p>Bài viết chi tiết hướng dẫn chỉnh sửa video bằng CapCut từ A-Z.</p>
+      <a href="capcut-tutorial.html">Đọc blog</a>
+    </div>
+
+    <div class="blog-card">
+      <h2>🤖 AI đang mất kiểm soát?</h2>
+      <p>Luận văn blog phân tích về nguy cơ AI phát triển vượt ngoài tầm tay con người.</p>
+      <a href="ai-mat-kiem-soat.html">Đọc blog</a>
+    </div>
+
+    <div class="blog-card">
+      <h2>🏠 Trang chủ hệ sinh thái</h2>
+      <p>Điểm xuất phát để khám phá các dự án và blogs khác trong hệ sinh thái.</p>
+      <a href="index.html">Vào trang</a>
+    </div>
+  </section>
+</body>
+</html>
